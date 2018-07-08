@@ -1,6 +1,4 @@
 /*  main.cpp
- *
- *  Created on: Jul 6, 2018
  *      Author: Yeiniel*/
 
 #include <iostream>
