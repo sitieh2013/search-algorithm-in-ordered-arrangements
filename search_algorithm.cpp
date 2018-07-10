@@ -1,5 +1,8 @@
-/*  main.cpp
- *      Author: Yeiniel*/
+/*main.cpp
+ *
+ *  Created on: Jul 6, 2018
+ *      Author: Yeiniel
+ */
 
 #include <iostream>
 #include <vector>
@@ -132,10 +135,10 @@ int TernarySearchFor(vector<int> list, int value) {
 			return dostercio;
 		} else if (list[dostercio] < value) {
 			limitedLeft = dostercio + 1;
+		} else {
+			limitedLeft = tercio + 1;
+			limitedRigth = dostercio - 1;
 		}
-
-		limitedLeft = tercio + 1;
-		limitedRigth = dostercio - 1;
 	}
 
 	return -1;
@@ -155,8 +158,9 @@ int SearchLinealFor(vector<int> list, int value) {
 
 int main() {
 
-	vector<int> list = { 7, 7, 8, 15, 45, 50, 77, 78 };
-	cout << "Position = " <<TernarySearchRecursive(list, 0, (int)list.size(), 15) << endl;
+	vector<int> list = { 700, 7000, 8000, 15000, 45000, 500000, 7700000,
+			78000000 };
+	cout << "Position = " << ExponentialSearch(list, 7700000) << endl;
 
 	return 0;
 }
